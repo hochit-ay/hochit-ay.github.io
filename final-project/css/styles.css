@@ -361,6 +361,8 @@ table {
     width: 100%;
 }
 
+iframe {width:100%;}
+
 footer {
     clear: both;
     color: #c78c06;
