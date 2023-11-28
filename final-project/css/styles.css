@@ -3,10 +3,12 @@
 body {
     font-family: Open Sans, sans-serif;
     max-width: 1200px;
+    margin:auto;
 }
 
 footer {
     max-width: 1200px;
+    margin:auto;
 }
 
 /* MENU */
@@ -38,9 +40,8 @@ footer {
     color: #c78c06;
     text-decoration: none;
     padding: 10px;
-    font-size: 20px;
+    font-size: 15px;
 }
-
 
 .menu-item li a:hover {
     color: #222;
@@ -82,39 +83,52 @@ footer {
     width: 100%;
 }
 
-
 .welcome-text {
     position: absolute;
-    background-color: rgb(0, 0, 0, 0.7);
+    background-color: rgb(0, 0, 0, 0.6);
     color: white;
+    width:100%;
+    top:auto;
+    bottom:auto;
+    height:90%;
 }
 
 
 .welcome-text h1 {
-    position: relative;
-    font-size: 4rem;
+    position:absolute;
+    top:8%;
+    font-size: 3rem;
     font-weight: 700;
     margin-top: 5%;
     margin-bottom: 0;
-    padding: 1rem;
+    padding-top:0;
+    padding-left: 1rem;
+    padding-right:1rem;
     opacity: 1;
+    margin-top:0;
+
 }
 
 .welcome-text p {
-    position: relative;
-    padding: 1rem;
+    position:absolute;
+    top:50%;
+    bottom:50%;
+    font-size:0.8rem;
+    padding-left: 1rem;
+    padding-right:1rem;
     margin-top: 0;
+    margin-bottom:2rem;
 }
 
 /* CONNECT WITH US BUTTON */
 .button-yellow {
-    position: relative;
+    position: absolute;
     margin-left: 1rem;
     display: flex;
-    bottom: 1rem;
+    bottom: 8%;
     background-color: #c78c06;
     width: 16rem;
-    height: 6rem;
+    height: 5.5rem;
 }
 
 .button-yellow-text {
@@ -358,146 +372,154 @@ footer {
 }
 
 @media only screen and (min-width: 760px) {
+
+    /* MENU - DESKTOP*/
+    #menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #222;
+        padding: 1rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
+
+    }
+
+    .menu-logo {
+        background-color: #222;
+    }
+
+    .menu-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 0;
+        gap: 2rem;
+    }
+
+
+    .menu-item li a {
+        font-size: 15px;
+    }
+
+    /* SEARCH - DESKTOP*/
+
+    #menu-search {
+        display: flex;
+        align-self: center;
+    }
+
+    #search {
+        width: 15vw;
+        height: 30px;
+    }
+
+    /* WELCOME - DESKTOP */
+
+    #welcome img {
+        width: 100%;
+        height: 550px;
+        object-fit: cover;
+        object-position: 25% 30%;
+    }
+
+    .welcome-text {
+        top:auto;
+        bottom:auto;
+        left: 10%;
+        right: 10%;
+        width: 80%;
+    }
+
+    .welcome-text h1 {
+        font-size: 4rem;
+    }
     
-        /* MENU - DESKTOP*/
-        #menu {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            background-color: #222;
-            padding: 1rem;
-            padding-left: 4rem;
-            padding-right: 4rem;
+    .welcome-text p {
+        font-size:1rem;
+    }
 
-        }
+    /* ABOUT US - DESKTOP*/
+    #about-us {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
 
-        .menu-logo {
-            background-color: #222;
-        }
+    .about-us-text {
+        padding-left: 1rem;
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
 
-        .menu-item {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            margin-bottom: 0;
-            gap: 2rem;
-        }
+    #about-us h1 {
+        margin-top: 0;
+        font-size: 40px;
+        font-weight: 700;
+        grid-column: 2/3;
+        grid-row: 1/2;
+        align-items: center;
+        margin-bottom: 0;
+    }
 
+    #about-us p {
+        font-size: 10px;
+    }
 
-        .menu-item li a {
-            font-size: 15px;
-        }
+    #about-us img {
+        grid-column: 1/2;
+    }
 
-        /* SEARCH - DESKTOP*/
+    /* OUR SERVICES - DESKTOP */
+    #our-services h1 {
+        padding-left: 4rem;
+        font-size: 40px;
+    }
 
-        #menu-search {
-            display: flex;
-            align-self: center;
-        }
+    .services-grid-1 {
+        padding-left: 4rem;
+        padding-right: 4rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 
-        #search {
-            width: 15vw;
-            height: 30px;
-        }
+    .services-grid-1-items {
+        margin: 0.3rem;
+    }
 
-        /* WELCOME - DESKTOP */
+    .button-black {
+        width: 100%;
+        margin-top: 2rem;
+    }
 
-        #welcome img {
-            width: 100%;
-            height: 550px;
-            object-fit: cover;
-            object-position: 25% 30%;
-        }
+    .services-grid-2 {
+        padding-left: 4rem;
+        padding-right: 4rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 
-        .welcome-text {
-            left: 10%;
-            right: 10%;
-            width: 80%;
-        }
+    .services-grid-2-items {
+        margin: 0.3rem;
+    }
 
-        /* ABOUT US - DESKTOP*/
-        #about-us {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: center;
-            padding-left: 5rem;
-            padding-right: 5rem;
-        }
+    #our-services h2 {
+        font-size: 20px;
+        margin-top: 0;
+    }
 
-        .about-us-text {
-            padding-left: 1rem;
-            grid-column: 2/3;
-            grid-row: 1/2;
-        }
+    .digital-article {
+        font-size: 10px;
+    }
 
-        #about-us h1 {
-            margin-top: 0;
-            font-size: 40px;
-            font-weight: 700;
-            grid-column: 2/3;
-            grid-row: 1/2;
-            align-items: center;
-            margin-bottom: 0;
-        }
+    .yellow-bg-text {
+        padding: 0.7rem;
+        padding-bottom: 0;
+    }
 
-        #about-us p {
-            font-size: 10px;
-        }
-
-        #about-us img {
-            grid-column: 1/2;
-        }
-
-        /* OUR SERVICES - DESKTOP */
-
-        #our-services h1 {
-            padding-left: 4rem;
-            font-size: 40px;
-        }
-
-
-        .services-grid-1 {
-            padding-left: 4rem;
-            padding-right: 4rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-        }
-
-        .services-grid-1-items {
-            margin: 0.3rem;
-        }
-
-        .button-black {
-            width: 100%;
-            margin-top: 2rem;
-        }
-
-        .services-grid-2 {
-            padding-left: 4rem;
-            padding-right: 4rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-        }
-
-        .services-grid-2-items {
-            margin: 0.3rem;
-        }
-
-        #our-services h2 {
-            font-size: 20px;
-            margin-top: 0;
-        }
-
-        .digital-article {
-            font-size: 10px;
-        }
-
-        .yellow-bg-text {
-            padding: 0.7rem;
-            padding-bottom: 0;
-        }
-    
 
     /* OUR VISION - DESKTOP */
     #our-vision {
